@@ -62,6 +62,14 @@ menu
     min-height: 700px;
     border: 10px solid darkgreen;
 }
+.title{
+  width:450px;
+  height:119px;
+  background: url(images/snakeplaceholder.png) no-repeat;
+}
+.title:hover{
+  background: url(images/snakeplaceholder2.png) no-repeat;
+}
 /*
  Ad Space
  */
