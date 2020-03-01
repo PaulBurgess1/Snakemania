@@ -1,0 +1,24 @@
+body {
+    background-image: url("images/StarfieldSimulation.gif");
+    background-size: cover;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    border:10px solid rgb(0, 255, 0);
+    background-color: black;
+}
+
+.howTo {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 960px;
+    height: 135px;
+    text-align: center;
+    color: white;
+    display: block;
+    font-family: "Andale Mono", /*AndaleMono,*/ monospace;
+    border:10px solid rgb(0, 255, 0);
+    background-color: black;
+}
