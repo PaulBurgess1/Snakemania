@@ -1,24 +1,56 @@
 body {
     background-image: url("images/StarfieldSimulation.gif");
     background-size: cover;
+    font-family: "Andale Mono", /*AndaleMono,*/ monospace;  
+    color: white; 
+       
 }
 
 canvas {
-    display: block;
+    display: inline-block;
     margin: 0 auto;
     border:10px solid rgb(0, 255, 0);
     background-color: black;
+    z-index: 999;
+}
+
+.title {
+    width: 450px;
+    height: 119px;
+    position: absolute;
+    top: 0;
+    background: url(images/snakeplaceholder.png) no-repeat;
+}
+.title:hover {
+    background: url(images/snakeplaceholder2.png) no-repeat;
 }
 
 .howTo {
+    display: inline-block;
     margin: 0 auto;
     margin-top: 10px;
     width: 960px;
     height: 135px;
     text-align: center;
-    color: white;
-    display: block;
-    font-family: "Andale Mono", /*AndaleMono,*/ monospace;
     border:10px solid rgb(0, 255, 0);
     background-color: black;
+}
+
+.leaderboard {
+    height: 94%; /* Full-height: remove this if you want "auto" height */
+    width: 300px; /* Set the width of the sidebar */
+    margin: 8px 20px 20px 20px;
+    padding-left: 10px;
+    text-align: center;
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    top: 0; /* Stay at the top */
+    right: 0;
+    
+    /* overflow-x: hidden; Disable horizontal scroll */
+    border:10px solid rgb(0, 255, 0);
+    background-color: black;
+}
+
+.leaderboard entries{
+    color: rgb(0, 255, 0);
 }
