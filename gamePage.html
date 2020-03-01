@@ -8,14 +8,37 @@
 </head>
 
 
-<!-- <div class="title"></div> -->
+<div class="menu_top">
+    <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li style="float: right;"><a href="#">Login</a></li>
+        <li style="float: right;"><a href="Home.html">Logout</a></li>
+    </ul>
+</div>
+
+<div class="title"></div>
+
+
 
 
 <!-- TODO: MAKE THE GAME START ON START BUTTON PRESS INSTEAD OF INSTANTLY LOADING IT -->
 <!-- MAY HAVE TO CHANGE js -->
 
+
+<!-- TODO: PUT CANVAS IN A CONTAINER SO IT'S ALWAYS ON TOP-->
+
 <body onload="startGame()">
-    <div class="leaderboard">
+    <div id="container" style="position: relative; width: 100%; height: 100%;z-index:990;">
+        <canvas>
+
+        </canvas> 
+    </div>
+    <div id ="theFixed" class="leaderboard">
+    <!-- <div id ="theFixed" class="leaderboard"> -->   
+<!-- // $(window).scroll(function(){
+    //     $("#theFixed").css("top",Math.max(0,250-$(this).scrollTop()));
+    // }); -->
+    
         <p>LEADERBOARD</p>
     </div>
     <div class="howTo">

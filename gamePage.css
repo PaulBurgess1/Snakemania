@@ -9,20 +9,27 @@ body {
 canvas {
     display: inline-block;
     margin: 0 auto;
-    border:10px solid rgb(0, 255, 0);
+    width: 960px;
+    height: 540px;
+    border: 10px solid rgb(0, 255, 0);
     background-color: black;
     z-index: 999;
 }
 
 .title {
-    width: 450px;
+    width: 960px;
     height: 119px;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     background: url(images/snakeplaceholder.png) no-repeat;
+    background-size: 960px 119px;
+    border: 10px solid rgb(0, 255, 0);
+    margin: 0 0 10px;
 }
+
 .title:hover {
     background: url(images/snakeplaceholder2.png) no-repeat;
+    background-size: 960px 119px;
 }
 
 .howTo {
@@ -43,6 +50,7 @@ canvas {
     padding-left: 10px;
     text-align: center;
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    
     top: 0; /* Stay at the top */
     right: 0;
     
@@ -53,4 +61,29 @@ canvas {
 
 .leaderboard entries{
     color: rgb(0, 255, 0);
+}
+
+.menu_top ul{
+    list-style-type: none;
+    /* padding: 5px 20px; */
+    overflow: hidden;
+    background-color:black;
+    border: 10px solid rgba(0,255,0,1); 
+}
+
+.menu_top li{
+    float: left;
+}
+
+.menu_top a{
+    display: block;
+    color: rgba(0,255,0,1); 
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.menu_top a:hover {
+    color: black;
+    background-color: #00FF00;
 }
