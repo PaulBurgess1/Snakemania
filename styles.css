@@ -63,12 +63,20 @@ menu
     border: 10px solid darkgreen;
 }
 .title{
-  width:450px;
+  border: 10px solid darkgreen;
+  border-bottom-width:0px;
+  min-width: 500px;
+  justify-self: center;
+  width:480px;
   height:119px;
   background: url(images/snakeplaceholder.png) no-repeat;
+  background-color: black;
+  background-position: center;
 }
 .title:hover{
   background: url(images/snakeplaceholder2.png) no-repeat;
+  background-color: black;
+  background-position: center;
 }
 /*
  Ad Space
@@ -84,4 +92,23 @@ menu
     position: absolute;
     width: 125px;
     src: url(images/art.png);
+}
+/*
+Nav buttons
+*/
+.btn{
+  text-align: center;
+  margin: 25px;
+  height:100px;
+  width:250px;
+  border: 2px solid rgba(0,255,0,1);
+  color: rgba(0,255,0,1);
+  background-color: inherit;
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn:hover{
+  border: 2px solid rgba(255,0,0,1);
+  color: rgba(255,0,0,1);
 }
