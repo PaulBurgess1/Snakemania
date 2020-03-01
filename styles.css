@@ -1,0 +1,79 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: rgb(0, 255, 0);
+  min-width: 800px;
+  width: max-content;
+  background-color: rgb(218, 137, 16);
+  background-image: url(images/StarfieldSimulation.gif);
+  margin: auto;
+  background-size: cover;
+ }
+ 
+ .main_body{
+
+    
+    min-width: 500px;
+    margin: auto; 
+ }
+ /*
+ format
+ */
+ .test{
+   list-style-type: none;
+   overflow: hidden;
+ }
+ .test li{
+    float: left;
+  }
+  /*
+menu
+  */
+ .menu_top ul{
+    list-style-type: none;
+    margin: 1px 2px;
+    padding: 5px 20px;
+    overflow: hidden;
+    background-color:black;
+    border: 10px solid rgba(0,255,0,1); 
+  }
+  .menu_top li{
+    float: left;
+  }
+  .menu_top a{
+    display: block;
+    color: rgba(0,255,0,1); 
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    }
+.menu_top a:hover {
+    color: black;
+    background-color: #00FF00;
+
+    }
+/*
+ page body
+ */
+.page_body{
+    text-align: center;
+    background-color: black;
+    min-height: 700px;
+    border: 10px solid darkgreen;
+}
+/*
+ Ad Space
+ */
+ .left_ad img{
+    display: inline-block;
+    position: absolute;
+    width: 125px;
+    src: url(images/art.png);
+}
+.right_ad img{
+    display: inline-block;
+    position: absolute;
+    width: 125px;
+    src: url(images/art.png);
+}
