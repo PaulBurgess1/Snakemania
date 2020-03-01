@@ -20,11 +20,11 @@ body {
  /*
  format
  */
- .test{
+ .format{
    list-style-type: none;
    overflow: hidden;
  }
- .test li{
+ .format li{
     float: left;
   }
   /*
