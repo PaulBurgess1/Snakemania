@@ -3,7 +3,6 @@ body {
     background-size: cover;
     font-family: "Andale Mono", /*AndaleMono,*/ monospace;  
     color: white; 
-       
 }
 
 canvas {
@@ -44,23 +43,47 @@ canvas {
 }
 
 .leaderboard {
-    height: 94%; /* Full-height: remove this if you want "auto" height */
-    width: 300px; /* Set the width of the sidebar */
-    margin: 8px 20px 20px 20px;
-    padding-left: 10px;
+    height: 86%; /* Full-height: remove this if you want "auto" height */
+    width: 44.8%; /* Set the width of the sidebar */
+    margin: 112px 20px 30px 20px;
     text-align: center;
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    position: fixed; 
     
     top: 0; /* Stay at the top */
     right: 0;
     
     /* overflow-x: hidden; Disable horizontal scroll */
-    border:10px solid rgb(0, 255, 0);
+    /* border:10px solid rgb(0, 255, 0); */
     background-color: black;
 }
 
 .leaderboard entries{
     color: rgb(0, 255, 0);
+}
+
+.gradient-border {
+    --borderWidth: 10px;
+    background: black;
+    position: fixed;
+}
+.gradient-border:after {
+    content: '';
+    margin: 103px 10px 20px 20px;
+    height: 88%;
+    width: 46%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background: linear-gradient(90deg,#8900ff, #8900ff,#8900ff,#8900ff,#a43cff,#e96089, #f18546,#ff8900,#b4ff6e, #00ff00,#00ff00,#00ff00,#00ff00);
+    animation: animatedgradient 6s ease alternate infinite;
+    background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .menu_top ul{
