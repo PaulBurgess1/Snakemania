@@ -16,39 +16,30 @@
     </ul>
 </div>
 
-<div class="title"></div>
-
-
 <!-- TODO: MAKE THE LEADERBOARDS AUTO SCROLL SCORES ... if possible -->
 
 <!-- TODO: MAKE THE GAME START ON START BUTTON PRESS INSTEAD OF INSTANTLY LOADING IT -->
 <!-- MAY HAVE TO CHANGE js -->
 
-<body onload="startGame()">
-    <div id="container" style="position: relative; width: 100%; height: 100%;z-index:990;">
-        <canvas>
+<body onload="drawCanvas()">
+    <div class="gameContainer">
+        <div class="title"></div>
+        <canvas id="gameCanvas"> </canvas> 
 
-        </canvas> 
+        <div class="howTo">
+            <p>HOW TO PLAY</p>
+            <p>yada-yada-yada-yada, game doesn't exist yet, yada-yada-yada-yada</p>
+            <p>press these buttons that don't do anything yet</p>
+        </div>
+
     </div>
-    <div class="gradient-border">
-    <!-- <div id ="theFixed" class="leaderboard"> -->   
-<!-- // $(window).scroll(function(){
-    //     $("#theFixed").css("top",Math.max(0,250-$(this).scrollTop()));
-    // }); -->
-    
-        
-    </div>
-    <div class="leaderboard">
-        <p>LEADERBOARD</p>
-    </div>
-    <!-- <div class="gradient-border"> yuh</div> -->
-    <div class="howTo">
-        <p>HOW TO PLAY</p>
-        <p>yada-yada-yada-yada, game doesn't exist yet, yada-yada-yada-yada</p>
-        <p>press these buttons that don't do anything yet</p>
+    <div class="leaderboardContainer">
+        <div class="gradient-border"></div>
+        <div id="leaderboard" class="leaderboard">
+            <p>LEADERBOARD</p>
+        </div>
     </div>
 </body>
 
 </html>
-
 <script type="text/javascript" src="snake.js"></script>
