@@ -18,13 +18,18 @@ USE `snakemaniadb`;
 
 -- Dumping structure for table snakemaniadb.snakemaniadb
 CREATE TABLE IF NOT EXISTS `snakemaniadb` (
-  `Username` char(50) NOT NULL DEFAULT 'Guest' COMMENT 'Username',
-  `Password` char(50) NOT NULL COMMENT 'Hashed Pasword',
-  `Hi-Score` smallint(5) unsigned zerofill NOT NULL DEFAULT 00000 COMMENT 'User''s highest score'
+  `username` char(50) NOT NULL DEFAULT 'Guest' COMMENT 'Username',
+  `password` char(50) NOT NULL COMMENT 'Hashed Pasword',
+  `hiscore` smallint(5) unsigned zerofill NOT NULL DEFAULT 00000 COMMENT 'User''s highest score',
+  PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table snakemaniadb.snakemaniadb: ~0 rows (approximately)
+-- Dumping data for table snakemaniadb.snakemaniadb: ~3 rows (approximately)
 /*!40000 ALTER TABLE `snakemaniadb` DISABLE KEYS */;
+INSERT INTO `snakemaniadb` (`username`, `password`, `hiscore`) VALUES
+	('Brayan', 'test', 00001),
+	('Erwin', 'Test123', 01000),
+	('Paul', 'Test', 00051);
 /*!40000 ALTER TABLE `snakemaniadb` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
