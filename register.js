@@ -18,6 +18,7 @@ submitbtn.addEventListener("click",function(){
     if(checkF(form,ruleLabels)==false){
         event.preventDefault();
     };
+    //ajax to add user to database
 })
 function checkF(form,ruleLabels){
     var passed=true
@@ -49,6 +50,10 @@ function checkF(form,ruleLabels){
         form[2].style.backgroundImage="url('images/snakeInputD.png')";
         ruleLabels[2].style.color="rgb(0, 255, 0)"
     }
+    //do some ajax shit here
+    //if it already exists then
+    //ruleLabels[2].style.color="red";
+    //else ruleLabels[2].style.color="rgb(0, 255, 0)"
 
     return passed
 }
