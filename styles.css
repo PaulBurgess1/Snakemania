@@ -113,3 +113,12 @@ Nav buttons
   border: 2px solid rgba(255,0,0,1);
   color: rgba(255,0,0,1);
 }
+/*
+Nav Buttons
+*/
+input[type=text]{
+  color:green;
+  height:50px;
+  width:250px;
+  background-image: url('images/snakeInputD.png');
+}
