@@ -23,7 +23,7 @@ function checkF(form,ruleLabels){
     var passed=true
     console.log(form);
     //check if username is atleast than 7
-    if(form[0].value.length<7){
+    if(form[0].value.length<7 || form[0].value==""){
         form[0].style.backgroundImage="url('images/snakeInputF.png')";
         ruleLabels[0].style.color="red";
         passed=false
@@ -32,7 +32,7 @@ function checkF(form,ruleLabels){
         ruleLabels[0].style.color=rgb(0, 255, 0)
     }
     //check if password is atleast than 5
-    if(form[1].value.length<5){
+    if(form[1].value.length<5 || form[1].value==""){
         form[1].style.backgroundImage="url('images/snakeInputF.png')";
         ruleLabels[1].style.color="red";
         passed=false
