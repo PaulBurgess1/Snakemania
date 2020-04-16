@@ -29,7 +29,7 @@ function checkF(form,ruleLabels){
         passed=false
     }else{
         form[0].style.backgroundImage="url('images/snakeInputD.png')";
-        ruleLabels[0].style.color=rgb(0, 255, 0)
+        ruleLabels[0].style.color="rgb(0, 255, 0)"
     }
     //check if password is atleast than 5
     if(form[1].value.length<5 || form[1].value==""){
@@ -38,7 +38,7 @@ function checkF(form,ruleLabels){
         passed=false
     }else{
         form[1].style.backgroundImage="url('images/snakeInputD.png')";
-        ruleLabels[1].style.color=rgb(0, 255, 0)
+        ruleLabels[1].style.color="rgb(0, 255, 0)"
     }
     //check if password is entered proper 
     if(form[2].value != form[1].value){
@@ -47,7 +47,7 @@ function checkF(form,ruleLabels){
         passed=false
     }else{
         form[2].style.backgroundImage="url('images/snakeInputD.png')";
-        ruleLabels[2].style.color=rgb(0, 255, 0)
+        ruleLabels[2].style.color="rgb(0, 255, 0)"
     }
 
     return passed
