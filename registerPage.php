@@ -1,3 +1,7 @@
+<?php
+$conn = new mysqli('localhost','root','','SnakemaniaDB');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,12 +62,7 @@ var submitbtn=document.forms[0].submit;
 var ruleLabels=document.getElementsByName("rule");
 console.log(ruleLabels)
 
-//turn the divs background to white if clicked
-for(var i=0; i<form.length;i++){
-    form[i].addEventListener("click",function(event){
-        event.target.style.backgroundImage="url('images/snakeInputD.png')";
-    })
-}
+
 //check if submit button is clicked that all
 //divs have been filled 
 submitbtn.addEventListener("click",function(){

@@ -30,7 +30,7 @@ $conn = new mysqli('localhost','root','','SnakemaniaDB');
         <div class="page_body"><!--HomePage body-->
         <?php
             $insert="INSERT INTO snakemaniadb (username, password, hiscore)
-            VALUES ('Greg', '3333333333333333', '42')";
+            VALUES ('1234567', '3333333333333333', '42')";
             
             if (mysqli_query($conn, $insert)) {
                 echo "Successfully Added to the Database";
