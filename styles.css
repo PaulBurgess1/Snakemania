@@ -122,3 +122,6 @@ input[type=text]{
   width:250px;
   background-image: url('images/snakeInputD.png');
 }
+.error{
+  color:red;
+}
