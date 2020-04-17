@@ -35,7 +35,7 @@
                     <label class="error" style="color:red"><?= $password_error ?></label><br>
                     <label>Password again</label><br>
                     <input type="text" name=passwordCheck><br>
-                    <label class="error" style="color:red"><?= $passwordCheck_error ?></label><br>
+                    <label class="error"><?= $passwordCheck_error ?></label><br>
                     <button class="btn" type="submit" value="submit" name="submit">Sign me Up!</button>
             </form>
         </div>
