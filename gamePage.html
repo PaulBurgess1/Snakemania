@@ -19,19 +19,19 @@
 <!-- TODO: MAKE THE LEADERBOARDS AUTO SCROLL SCORES ... if possible -->
 
 <!-- TODO: MAKE THE GAME START ON START BUTTON PRESS INSTEAD OF INSTANTLY LOADING IT -->
-<!-- MAY HAVE TO CHANGE js -->
-
-<body onload="drawCanvas()">
+<body>
+    
     <div class="gameContainer">
         <div class="title"></div>
-        <canvas id="gameCanvas"> </canvas> 
-
+        
+        <canvas id="canvas" width="960px" height="540px"></canvas>
+        <script src="snake.js"></script>
+    
         <div class="howTo">
             <p>HOW TO PLAY</p>
             <p>yada-yada-yada-yada, game doesn't exist yet, yada-yada-yada-yada</p>
             <p>press these buttons that don't do anything yet</p>
         </div>
-
     </div>
     <div class="leaderboardContainer">
         <div class="gradient-border"></div>
@@ -40,6 +40,4 @@
         </div>
     </div>
 </body>
-
 </html>
-<script type="text/javascript" src="snake.js"></script>

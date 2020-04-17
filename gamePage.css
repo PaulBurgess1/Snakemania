@@ -29,11 +29,9 @@ body {
 }
 
 canvas {
-    width: 960px;
-    height: 540px;
+    background-color: black;
     border: 10px solid rgb(0, 255, 0);
-    z-index: 999;
-}
+} 
 
 .howTo {
     margin-top: 10px;
