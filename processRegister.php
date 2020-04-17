@@ -42,9 +42,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $search="SELECT username FROM snakemaniadb WHERE username='$userName';";
         if ($result=mysqli_query($conn,$search)){
             $q_rows = mysqli_num_rows($result);
+            $hash_pass= password_hash($password, PASSWORD_DEFAULT);
             if ($q_rows==0){
                 $insert="INSERT INTO snakemaniadb (username, password, hiscore)
-                VALUES ('$userName', '$password', '0')";
+                VALUES ('$userName', '$hash_pass', '0')";
                 if (mysqli_query($conn, $insert)) {
                     header("Location: DBTest.php");
                     exit();

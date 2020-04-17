@@ -19,17 +19,18 @@ USE `snakemaniadb`;
 -- Dumping structure for table snakemaniadb.snakemaniadb
 CREATE TABLE IF NOT EXISTS `snakemaniadb` (
   `username` char(50) NOT NULL DEFAULT 'Guest' COMMENT 'Username',
-  `password` char(50) NOT NULL COMMENT 'Hashed Pasword',
+  `password` char(255) NOT NULL COMMENT 'Hashed Password',
   `hiscore` smallint(5) unsigned zerofill NOT NULL DEFAULT 00000 COMMENT 'User''s highest score',
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table snakemaniadb.snakemaniadb: ~3 rows (approximately)
+-- Dumping data for table snakemaniadb.snakemaniadb: ~8 rows (approximately)
 /*!40000 ALTER TABLE `snakemaniadb` DISABLE KEYS */;
 INSERT INTO `snakemaniadb` (`username`, `password`, `hiscore`) VALUES
-	('Brayan', 'test', 00001),
-	('Erwin', 'Test123', 01000),
-	('Paul', 'Test', 00051);
+	('EEEEEEEE', '$2y$10$c454KDGfGo9wyP0nBsQy7O16iaV1qHZdqxkrULlfsv.g4nBTHOnou', 00000),
+	('Paul123', '$2y$10$9M5NPmjn6nlkt.qcN5bFtOEfYXf7RYw.2Z/AYk/gepKfenNvTJ4QG', 00000),
+	('Test23', '$2y$10$Jh8vdPSLh5fcfHjwhtm.Y./uEkcpv7yvWmN2mu4i5I1ts7J3gn1wu', 00000),
+	('Test546', '$2y$10$yxTBvAALHqBRczQvWsjwMOqt926zz90Yx5cxcX5xvd.0vFQo0VUrC', 00000);
 /*!40000 ALTER TABLE `snakemaniadb` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

@@ -29,14 +29,7 @@ $conn = new mysqli('localhost','root','','SnakemaniaDB');
         <div class="title"></div>
         <div class="page_body"><!--HomePage body-->
         <?php
-            $insert="INSERT INTO snakemaniadb (username, password, hiscore)
-            VALUES ('1234567', '3333333333333333', '42')";
-            
-            if (mysqli_query($conn, $insert)) {
-                echo "Successfully Added to the Database";
-            } else {
-                echo "Error: " . $insert . "<br>" . mysqli_error($conn);
-            }
+
             
             
             $query = "SELECT * FROM snakemaniadb;";
@@ -67,7 +60,19 @@ $conn = new mysqli('localhost','root','','SnakemaniaDB');
                 }
                 echo "</table>";
             }
+            $query = "SELECT password FROM snakemaniadb WHERE username ='EEEEEEEE';";
+            $result=mysqli_query($conn,$query);
+			$row = mysqli_fetch_assoc($result);
+			
+			echo $row['password'];
 
+            if(password_verify("Password",$row['password'])){
+				echo "       Good";
+			}
+			else{
+					echo    "   bad";
+			}
+            //echo $is_good;
             
         ?>
 
