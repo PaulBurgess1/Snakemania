@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SnakeMania - Home</title>
     <link href="styles.css" rel="stylesheet">
+    <?php include('processRegister.php'); ?>
     
 </head>
 
@@ -24,20 +25,18 @@
         </div>
         <div class="title"></div>
         <div class="page_body"><!--register body-->
-            <form action="processRegister.php" method="post">
+            <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
                 
                     <br><label>Username</label><br>
-                    <input type="text" name=userName><br><br>
+                    <input type="text" name=userName><br>
+                    <label class="error" style="color:red"><?= $userName_error ?></label><br>
                     <label>Password</label><br>
-                    <input type="text" name=password><br><br>
+                    <input type="text" name=password><br>
+                    <label class="error" style="color:red"><?= $password_error ?></label><br>
                     <label>Password again</label><br>
-                    <input type="text" name=passwordCheck><br><br>
+                    <input type="text" name=passwordCheck><br>
+                    <label class="error" style="color:red"><?= $passwordCheck_error ?></label><br>
                     <button class="btn" type="submit" value="submit" name="submit">Sign me Up!</button>
-                    <br><label>Instructions </label><br>
-                    <br><label name="rule1">1. Username must not have special char</label><br>
-                    <br><label name="rule2">2. all fields must be filled</label><br>
-                    <br><label name="rule3">3. Must enter the same password twice</label><br>
-                    <br><label name="rule4">4. Username must not already be in use</label><br>
             </form>
         </div>
         
