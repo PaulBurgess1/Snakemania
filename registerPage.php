@@ -1,7 +1,3 @@
-<?php
-$conn = new mysqli('localhost','root','','SnakemaniaDB');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +24,7 @@ $conn = new mysqli('localhost','root','','SnakemaniaDB');
         </div>
         <div class="title"></div>
         <div class="page_body"><!--register body-->
-            <form action="#">
+            <form action="processRegister.php" method="post">
                 
                     <br><label>Username</label><br>
                     <input type="text" name=userName><br><br>
@@ -38,10 +34,10 @@ $conn = new mysqli('localhost','root','','SnakemaniaDB');
                     <input type="text" name=passwordCheck><br><br>
                     <button class="btn" type="submit" value="submit" name="submit">Sign me Up!</button>
                     <br><label>Instructions </label><br>
-                    <br><label name="rule">1. Username must be atleast 7 chars</label><br>
-                    <br><label name="rule">2. Password must be at least 5 chars long</label><br>
-                    <br><label name="rule">3. Must enter the same password twice</label><br>
-                    <br><label name="rule">4. Username must not already be in use</label><br>
+                    <br><label name="rule1">1. Username must not have special char</label><br>
+                    <br><label name="rule2">2. all fields must be filled</label><br>
+                    <br><label name="rule3">3. Must enter the same password twice</label><br>
+                    <br><label name="rule4">4. Username must not already be in use</label><br>
             </form>
         </div>
         
@@ -54,60 +50,3 @@ $conn = new mysqli('localhost','root','','SnakemaniaDB');
 
 </body>
 </html>
-
-<script type="text/javascript">
-//all dev inputs pluse submit button 
-var form=document.querySelectorAll("input");
-var submitbtn=document.forms[0].submit;
-var ruleLabels=document.getElementsByName("rule");
-console.log(ruleLabels)
-
-
-//check if submit button is clicked that all
-//divs have been filled 
-submitbtn.addEventListener("click",function(){
-    console.log(form);
-    //went there is an error do this one
-    if(checkF(form,ruleLabels)==false){
-        event.preventDefault();
-    };
-    //ajax to add user to database
-})
-function checkF(form,ruleLabels){
-    var passed=true
-    console.log(form);
-    //check if username is atleast than 7
-    if(form[0].value.length<7 || form[0].value==""){
-        form[0].style.backgroundImage="url('images/snakeInputF.png')";
-        ruleLabels[0].style.color="red";
-        passed=false
-    }else{
-        form[0].style.backgroundImage="url('images/snakeInputD.png')";
-        ruleLabels[0].style.color="rgb(0, 255, 0)"
-    }
-    //check if password is atleast than 5
-    if(form[1].value.length<5 || form[1].value==""){
-        form[1].style.backgroundImage="url('images/snakeInputF.png')";
-        ruleLabels[1].style.color="red";
-        passed=false
-    }else{
-        form[1].style.backgroundImage="url('images/snakeInputD.png')";
-        ruleLabels[1].style.color="rgb(0, 255, 0)"
-    }
-    //check if password is entered proper 
-    if(form[2].value != form[1].value){
-        form[2].style.backgroundImage="url('images/snakeInputF.png')";
-        ruleLabels[2].style.color="red";
-        passed=false
-    }else{
-        form[2].style.backgroundImage="url('images/snakeInputD.png')";
-        ruleLabels[2].style.color="rgb(0, 255, 0)"
-    }
-    //do some ajax shit here
-    //if it already exists then
-    //ruleLabels[2].style.color="red";
-    //else ruleLabels[2].style.color="rgb(0, 255, 0)"
-
-    return passed
-}
-</script>
