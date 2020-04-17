@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SnakeMania - Home</title>
     <link href="styles.css" rel="stylesheet">
+    <?php include('processLogin.php'); ?>
     
 </head>
 
@@ -24,11 +25,14 @@
         </div>
         <div class="title"></div>
         <div class="page_body"><!--login body-->
-            <form action="#">
+            <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
                     <br><label>Username</label><br>
-                    <input type="text" name=userName><br><br>
+                    <input type="text" name=userName><br>
+                    <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
+                    <label class="error"><?= $userName_error ?></label><br><br>
                     <label>Password</label><br>
-                    <input type="text" name=password><br><br>
+                    <input type="text" name=password><br>
+                    <label class="error"><?= $password_error ?></label><br><br>
                     <label>Snake Colour</label><br>
                     <input type="color" name="favorite"><br><br>
                     
