@@ -16,7 +16,7 @@ body {
     margin: 0 0 0 10px;
     position: absolute;
     width: auto;
-    height: 878px;
+    height: auto;
     background: linear-gradient(90deg,#8900ff, #8900ff,#8900ff,#8900ff,#a43cff,#e96089, #f18546,#ff8900,#b4ff6e, #00ff00,#00ff00,#00ff00,#00ff00);
     animation: animatedgradient 6s ease alternate infinite;
     background-size: 300% 300%;
@@ -28,6 +28,30 @@ body {
     100% { background-position: 0% 50%; }
 }
 
+.leaderboard {
+    height: auto;
+    margin: 10px 10px 0 10px;
+    width: auto;
+    text-align: center;
+    /* overflow-x: hidden; Disable horizontal scroll */
+    background-color: black;
+}
+
+.leaderboard entries{
+    color: rgb(0, 255, 0);
+}
+
+#container canvas, #startScreen {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#container canvas, #endScreen {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+}
 canvas {
     background-color: black;
     border: 10px solid rgb(0, 255, 0);
@@ -35,10 +59,14 @@ canvas {
 
 .howTo {
     margin-top: 10px;
-    width: 960px;
-    height: 135px;
+    width: auto;
+    height: auto;
     text-align: center;
     border: 10px solid rgb(0, 255, 0);
+}
+
+table{
+    text-align: left;
 }
 
 .title {
@@ -54,19 +82,6 @@ canvas {
 .title:hover {
     background: url(images/snakeplaceholder2.png) no-repeat;
     background-size: 960px 119px;
-}
-
-.leaderboard {
-    height: 848px;
-    margin: 10px 10px 0 10px;
-    width: auto;
-    text-align: center;
-    /* overflow-x: hidden; Disable horizontal scroll */
-    background-color: black;
-}
-
-.leaderboard entries{
-    color: rgb(0, 255, 0);
 }
 
 .menu_top ul{

@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
-
+<!-- <?php 
+    if($_GET){
+        echo $_GET['user']
+    } else{
+        echo "no user";
+    }
+?> -->
 <head>
     <meta charset="UTF-8" />
     <title>SnakeMania</title>
@@ -16,21 +22,42 @@
     </ul>
 </div>
 
-<!-- TODO: MAKE THE LEADERBOARDS AUTO SCROLL SCORES ... if possible -->
-
+<!-- TODO: MAKE THE LEADERBOARDS AUTO SCROLL SCORES ... if possible idk if we even need leaderboard -->
 <!-- TODO: MAKE THE GAME START ON START BUTTON PRESS INSTEAD OF INSTANTLY LOADING IT -->
 <body>
-    
     <div class="gameContainer">
         <div class="title"></div>
+
+        <div id="startScreen">
+            <p>START SCREEN</p>
+            <script type="text/javascript">
+                document.addEventListener("keydown", e => {
+                    if(e.keyCode == 82)
+                        document.getElementById("startScreen").style.display = "none"; 
+                        document.getElementById("endScreen").style.display = "none";
+                });
+            </script>
+        </div>
+
+        <div id="endScreen">
+            <p>END SCREEN</p>
+        </div>
+        <script type="text/javascript">
+            document.getElementById("endScreen").style.display = "none";  
+        </script>
+
+        <canvas id="gameCanvas" width="960px" height="540px"></canvas>       
         
-        <canvas id="canvas" width="960px" height="540px"></canvas>
-        <script src="snake.js"></script>
-    
         <div class="howTo">
             <p>HOW TO PLAY</p>
-            <p>yada-yada-yada-yada, game doesn't exist yet, yada-yada-yada-yada</p>
-            <p>press these buttons that don't do anything yet</p>
+            <table>
+                <tr><p>R - start/restart game</p></tr>
+                <tr><p>W - snake goes UP</p></tr>
+                <tr><p>A - snake goes LEFT</p></tr>
+                <tr><p>S - snake goes DOWN</p></tr>
+                <tr><p>D - snake goes RIGHT</p></tr>
+            </table>
+            
         </div>
     </div>
     <div class="leaderboardContainer">
@@ -41,3 +68,4 @@
     </div>
 </body>
 </html>
+<script src="snake.js"></script>
