@@ -1,4 +1,5 @@
 <?php
+if (!isset($_SESSION)) session_start();
 $conn = new mysqli('localhost','root','','SnakemaniaDB');
 $userName_error=$password_error="";
 
@@ -6,6 +7,8 @@ $userName_error=$password_error="";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $userName=$_POST['userName'];
     $password=$_POST['password'];
+    $favorite=$_POST['favorite'];
+    
     if (empty($userName)){
         $userName_error=" |username field was empty| ";
     }
@@ -23,7 +26,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $row = mysqli_fetch_assoc($result);
                 if(password_verify($password, $row['password'])){
                     //gotta talk with erwin on this part
-                    echo "done";
+                    $_SESSION['username']=$userName;
+                    $_SESSION['color']=$favorite;
                 }
                 else{
                     $password_error=" |password was incorrect| ";

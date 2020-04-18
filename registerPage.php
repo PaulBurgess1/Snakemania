@@ -17,13 +17,7 @@
     <div class="main_body">
         
         <div class="menu_top">
-            <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li style="float: right;"><a href="#">Login</a></li>
-                <li style="float: right;"><a href="Home.html">Logout</a></li>
-            </ul>
-        </div>
-        <div class="title"></div>
+        <?php include 'Navbar.php' ?>
         <div class="page_body"><!--register body-->
             <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
                 

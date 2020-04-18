@@ -125,3 +125,7 @@ input[type=text]{
 .error{
   color:red;
 }
+#color_demo {
+  padding: 10px ;
+  border: 1px solid white ;
+}
