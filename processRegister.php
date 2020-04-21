@@ -47,7 +47,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $insert="INSERT INTO snakemaniadb (username, password, hiscore)
                 VALUES ('$userName', '$hash_pass', '0')";
                 if (mysqli_query($conn, $insert)) {
-                    header("Location: Home.html");
+                    header("Location: Home.php");
                     exit();
                 }
             }else{
