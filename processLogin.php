@@ -5,7 +5,7 @@ $userName_error=$password_error="";
 
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $userName=$_POST['userName'];
+    $userName=$conn->real_escape_string($_POST['userName']);
     $password=$_POST['password'];
     $favorite=$_POST['favorite'];
     
@@ -18,6 +18,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if($userName_error == '' and $password_error == ''){
         unset($_POST['submit']);
         $search="SELECT password FROM snakemaniadb WHERE username='$userName';";
+
         if ($result=mysqli_query($conn,$search)){
             $q_rows = mysqli_num_rows($result);
             if ($q_rows==0){
@@ -28,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     //gotta talk with erwin on this part
                     $_SESSION['username']=$userName;
                     $_SESSION['color']=$favorite;
-                    header("Location: Home.html");
+                    header("Location: Home.php");
                     exit();
                 }
                 else{
