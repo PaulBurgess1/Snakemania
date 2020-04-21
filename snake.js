@@ -1,5 +1,10 @@
 window.addEventListener("keydown", ev => {
     if (ev.keyCode === 82) {
+
+        if(color == null){
+            color = '#FFFFFF'
+        }
+    
         // TODO: MAKE "R" ignored until GAMEOVER, use "R" to restart after GAMEOVER
         const cvs = document.getElementById("gameCanvas");
         const ctx = cvs.getContext("2d");
@@ -13,8 +18,6 @@ window.addEventListener("keydown", ev => {
         document.addEventListener("keydown", getDirection);
 
         // TODO: TWEAK SIZE OF SNAKE/FOOD AND SPEED ------------------------------------------
-        // TODO: MAKE THE GAME START ON START BUTTON PRESS INSTEAD OF INSTANTLY LOADING IT ------------------------------------------
-
         function getDirection(e){
             let key = e.keyCode;
             if( key == 65 && d != "RIGHT"){
@@ -28,11 +31,9 @@ window.addEventListener("keydown", ev => {
             }
         }
 
-        // TODO: get colour from database or login ------------------------------------------
         function drawSnake(x,y){
-            ctx.fillStyle = "#FFF";
+            ctx.fillStyle = color;
             ctx.fillRect(x * snakeW, y * snakeH, snakeW, snakeH);
-
             ctx.fillStyle = "#000";
             ctx.strokeRect(x * snakeW, y * snakeH, snakeW, snakeH);
         }
@@ -56,7 +57,6 @@ window.addEventListener("keydown", ev => {
         function drawFood(x,y){
             ctx.fillStyle = "yellow";
             ctx.fillRect(x * snakeW, y * snakeH, snakeW, snakeH);
-
             ctx.fillStyle = "#000";
             ctx.strokeRect(x * snakeW, y * snakeH, snakeW, snakeH);
         }

@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html>
-<!-- <?php 
-    if($_GET){
-        echo $_GET['user']
-    } else{
-        echo "no user";
-    }
-?> -->
 <head>
     <meta charset="UTF-8" />
     <title>SnakeMania</title>
     <link href="gamePage.css" rel="stylesheet">
 </head>
 
+<?php include 'Navbar.php' ?>
 
-<div class="menu_top">
-    <ul>
-        <li><a href="Home.html">Home</a></li>
-        <li style="float: right;"><a href="#">Login</a></li>
-        <li style="float: right;"><a href="Home.html">Logout</a></li>
-    </ul>
-</div>
+<?php
+    if($_GET){
+        echo $_GET['user'];
+    } else{
+        echo "no user";
+    }
+?>
+
+<p id="colorDom"> <?php echo htmlspecialchars($color); ?></p>
+<?php
+    // Hex colour inverse function from: https://www.jonasjohn.de/snippets/php/color-inverse.htm
+    function color_inverse($color){
+        $color = str_replace('#', '', $color);
+        if (strlen($color) != 6){ return '000000'; }
+        $rgb = '';
+        for ($x=0;$x<3;$x++){
+            $c = 255 - hexdec(substr($color,(2*$x),2));
+            $c = ($c < 0) ? 0 : dechex($c);
+            $rgb .= (strlen($c) < 2) ? '0'.$c : $c;
+        }
+        return '#'.$rgb;
+    }
+    $newBackground = color_inverse($color);
+?>
+<p id="backDom"> <?php echo htmlspecialchars($newBackground); ?></p>
+
+<script>
+    var div = document.getElementById("colorDom");
+    var color = div.textContent;
+    var newBackground = htmlspecialchars(color_inverse(color));
+    if (newBackground == undefined || newBackground == null)
+        newBackground = 'white';
+            
+    // document.getElementById("colorDom").style.display = "none"; 
+    // document.getElementById("backDom").style.display = "none"; 
+</script>
 
 <!-- TODO: MAKE THE LEADERBOARDS AUTO SCROLL SCORES ... if possible idk if we even need leaderboard -->
 <!-- TODO: MAKE THE GAME START ON START BUTTON PRESS INSTEAD OF INSTANTLY LOADING IT -->
 <body>
     <div class="gameContainer">
-        <div class="title"></div>
-
         <div id="startScreen">
             <p>START SCREEN</p>
             <script type="text/javascript">
                 document.addEventListener("keydown", e => {
                     if(e.keyCode == 82)
                         document.getElementById("startScreen").style.display = "none"; 
+                        
                         document.getElementById("endScreen").style.display = "none";
                 });
             </script>
@@ -46,7 +68,7 @@
             document.getElementById("endScreen").style.display = "none";  
         </script>
 
-        <canvas id="gameCanvas" width="960px" height="540px"></canvas>       
+        <canvas id="gameCanvas" style="background-color:<?php echo $newBackground ?>;"width="960px" height="540px"></canvas>       
         
         <div class="howTo">
             <p>HOW TO PLAY</p>
