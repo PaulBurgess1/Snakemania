@@ -31,6 +31,12 @@
                     <input type="text" name=passwordCheck><br>
                     <label class="error"><?= $passwordCheck_error ?></label><br>
                     <button class="btn" type="submit" value="submit" name="submit">Sign me Up!</button>
+                    <br><label>registeration rules</label><br>
+                    <br><label>1. all text inputs must be filled</label><br>
+                    <br><label>2. no special characters for the username</label><br>
+                    <br><label>3. username and password must be between 5 and 10 characters</label><br>
+                    <br><label>4. both password inputs must match</label><br>
+
             </form>
         </div>
         
