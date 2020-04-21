@@ -18,6 +18,7 @@ $conn = new mysqli('localhost','root','','SnakemaniaDB');
     <li>
     <?php include 'Navbar.php' ?>
         <div class="page_body"><!--HomePage body-->
+        <div class="leaderboard">
         <?php
             $query = "SELECT username,hiscore FROM snakemaniadb ORDER BY hiscore DESC;";
             $result = mysqli_query($conn,$query);
@@ -45,6 +46,7 @@ $conn = new mysqli('localhost','root','','SnakemaniaDB');
                 echo "</table>";
             }
         ?>
+        </div>
 </div>
 </li>
         <li><img class="right_ad" src="images/art.png"></li>

@@ -129,3 +129,18 @@ input[type=text]{
   padding: 10px ;
   border: 1px solid white ;
 }
+.leaderboard{
+  text-align: center;
+  display: inline-block;
+  font-family: "Andale Mono", /*AndaleMono,*/ monospace;  
+}
+.leaderboard th{
+ color:white;
+ font-size: 18px;
+ padding: 25px;
+ border: 1px solid white ;
+}
+.leaderboard td{
+color:red;
+border: 1px solid red ;
+}
