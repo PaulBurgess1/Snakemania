@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnakeMania - Home</title>
+    <title>SnakeMania - Login</title>
     <link href="styles.css" rel="stylesheet">
     <?php include('processLogin.php'); ?>
     

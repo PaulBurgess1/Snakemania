@@ -19,7 +19,6 @@
             <button class="btn" onclick="window.location.href='registerPage.php';">Registration</button><br>
             <button class='btn' onclick="window.location.href='gamePage.php';">
             <?php
-            $gamePage="'gamePage.php'";
             if ($username == ""){
                 echo "Play as Guest</button><br>";
 
